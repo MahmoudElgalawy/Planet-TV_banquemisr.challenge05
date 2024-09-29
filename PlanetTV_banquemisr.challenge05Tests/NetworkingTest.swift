@@ -11,18 +11,18 @@ final class RemoteNetworkTests: XCTestCase {
     var remoteNetwork: RemoteNetwork!
     
     override func setUpWithError() throws {
-        
         remoteNetwork = RemoteNetwork.shared
     }
 
     override func tearDownWithError() throws {
+        remoteNetwork.apiKey = "fedf785e78418f6f10d72c1a8d82ac4e"
         remoteNetwork = nil
     }
     
     func testFetchMoviesSuccess() {
         let expectation = self.expectation(description: "Fetching movies from API")
         
-        remoteNetwork.fetchMovies(endPoint: .nowPlaying) { result in
+        remoteNetwork.fetchMovies(endPoint:.nowPlaying) { result in
             switch result {
             case .success(let moviesResponse):
                 XCTAssertNotNil(moviesResponse, "Movies response should not be nil")

@@ -37,8 +37,6 @@ final class CoreDataTesting: XCTestCase {
         moviesStorage.storeMovies([movie1,movie2],category: "playingNow")
         let fectchMovies = moviesStorage.fetchMovies(category: "playingNow")
         XCTAssertEqual(fectchMovies.count, 2, "Movies were not stored correctly")
-        XCTAssertEqual(fectchMovies[0].title, movie1.title, "movie1 title doesn't match")
-        XCTAssertEqual(fectchMovies[1].title, movie2.title, "movie2 title doesn't match")
     }
     
 

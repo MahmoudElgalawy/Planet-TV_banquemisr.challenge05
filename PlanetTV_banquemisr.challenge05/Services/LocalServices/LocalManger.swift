@@ -12,8 +12,6 @@ import UIKit
 protocol LocalManger{
     func storeMovies(_ movies: [Movies], category: String)
     func fetchMovies(category: String?) -> [Movies]
-//    func fetchMovie(id: Int) -> Movies?
-//    func deleteMovie(_ movie: Movies)
     func deleteAllMovies()
 }
 
@@ -86,50 +84,6 @@ class MoviesStorage: LocalManger {
         }
         return moviesArray
     }
-
-//    func fetchMovie(id: Int) -> Movies? {
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MoviesData")
-//        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
-//        
-//        do {
-//            let results = try managedContext.fetch(fetchRequest) as! [NSManagedObject]
-//            if let managedMovie = results.first {
-//                return Movies(
-//                    id: managedMovie.value(forKey: "id") as! Int,
-//                    title: managedMovie.value(forKey: "title") as! String,
-//                    backdropPath: managedMovie.value(forKey: "backdropPath") as? String,
-//                    posterPath: managedMovie.value(forKey: "posterPath") as? String,
-//                    overview: managedMovie.value(forKey: "overview") as! String,
-//                    voteAverage: managedMovie.value(forKey: "voteAverage") as? Double,
-//                    voteCount: managedMovie.value(forKey: "voteCount") as? Int,
-//                    runtime: managedMovie.value(forKey: "runtime") as? Int,
-//                    releaseDate: managedMovie.value(forKey: "releaseDate") as! String,
-//                    genres: nil,
-//                    tagline: managedMovie.value(forKey: "tagline") as? String
-//                )
-//            }
-//        } catch {
-//            print("Error fetching movie by id: \(error)")
-//        }
-//        return nil
-//    }
-
-//    func deleteMovie(_ movie: Movies) {
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MoviesData")
-//        fetchRequest.predicate = NSPredicate(format: "id == %d", movie.id)
-//        
-//        do {
-//            let movies = try managedContext.fetch(fetchRequest) as! [NSManagedObject]
-//            for movieObject in movies {
-//                managedContext.delete(movieObject)
-//            }
-//            try managedContext.save()
-//            print("Movie deleted successfully")
-//        } catch {
-//            print("Error deleting movie: \(error)")
-//        }
-//    }
-//    
     func deleteAllMovies() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MoviesData")
         

@@ -31,7 +31,7 @@ final class MoviesViewModelTesting: XCTestCase {
        let expectation = XCTestExpectation(description: "Load Now upcoming Movies")
         viewModel.bindMoviesToViewController = {
             XCTAssertNotNil(self.viewModel.upcoming, "upcoming movies should not be nil")
-            XCTAssertFalse(self.viewModel.playingNow?.isEmpty ?? true, "upcoming movies shouldn't be nil")
+            XCTAssertFalse(self.viewModel.upcoming?.isEmpty ?? true, "upcoming movies shouldn't be nil")
             expectation.fulfill()
         }
         viewModel.loadUpcoming()
@@ -60,7 +60,7 @@ final class MoviesViewModelTesting: XCTestCase {
     
     func testLoadImageDataFailure(){
         let expectation = XCTestExpectation(description: "Fail to Load movie image")
-        let invalidPosterPath = "https://image.tmdb.org/l/k/w500/invalid_image.jpg"
+        let invalidPosterPath = "https://invalid-url.com/invalid_image.jpg"
         viewModel.loadImageData(posterPath: invalidPosterPath) { data in
             XCTAssertNil(data, "Image data should  be nil for invalid image path")
             expectation.fulfill()

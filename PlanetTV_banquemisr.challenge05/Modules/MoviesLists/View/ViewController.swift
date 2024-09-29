@@ -28,10 +28,6 @@ class ViewController: UIViewController {
         moviesCollection.delegate = self
         moviesCollection.dataSource = self
         setIndicator()
-        let backImage = UIImage(named: "arrowshape.turn.up.left")
-           navigationController?.navigationBar.backIndicatorImage = backImage
-           navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-           navigationController?.navigationBar.tintColor = UIColor.orange
         tabBar.delegate = self
         tabBar.selectedItem = tabBar.items?[0]
         vBack.layer.cornerRadius = 20
@@ -50,20 +46,15 @@ extension ViewController{
     
     func updateViewForSelectedTab(index: Int) {
         switch index {
-         case 0:
+        case 0:
             tabIndex = 0
             moviesCollection.reloadData()
-            //viewModel?.collectionArr = viewModel?.playingNow
         case 1:
             tabIndex = 1
             moviesCollection.reloadData()
-           // viewModel?.collectionArr = viewModel?.upcoming
-            
         case 2:
             tabIndex = 2
             moviesCollection.reloadData()
-          //  viewModel?.collectionArr = viewModel?.popular
-        
         default:
             break
         }
@@ -71,20 +62,18 @@ extension ViewController{
     
     func setIndicator(){
         indicator = UIActivityIndicatorView(style: .large)
-        indicator?.color = .black
+        indicator?.color = .color1
         indicator?.center = self.moviesCollection.center
         indicator?.startAnimating()
         self.view.addSubview(indicator!)
         
     }
     func setupCollectionView(){
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 2
         layout.minimumInteritemSpacing = 2
         moviesCollection.setCollectionViewLayout(layout, animated: true)
-        
     }
     func registerCell(){
         moviesCollection.register(MovieaCVC.nib(), forCellWithReuseIdentifier: "MovieaCVC")
@@ -135,80 +124,77 @@ extension ViewController{
         let queue = DispatchQueue(label: "NetworkMonitor")
         monitor.start(queue: queue)
     }
-
-
 }
 
 
 // MARK: - UIcollectionView
-    
+
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UISearchBarDelegate{
-        
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            switch tabIndex {
-             case 0:
-                return viewModel?.playingNow?.count ?? 0
-            case 1:
-                return viewModel?.upcoming?.count ?? 0
-            default:
-                return viewModel?.popular?.count ?? 0
-            }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch tabIndex {
+        case 0:
+            return viewModel?.playingNow?.count ?? 0
+        case 1:
+            return viewModel?.upcoming?.count ?? 0
+        default:
+            return viewModel?.popular?.count ?? 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = moviesCollection.dequeueReusableCell(withReuseIdentifier: "MovieaCVC", for: indexPath) as! MovieaCVC
+        switch tabIndex {
+        case 0:
+            cell.configureCell(movie:  viewModel?.playingNow?[indexPath.row])
+        case 1:
+            cell.configureCell(movie:  viewModel?.upcoming?[indexPath.row])
+        default:
+            cell.configureCell(movie:  viewModel?.popular?[indexPath.row])
         }
         
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = moviesCollection.dequeueReusableCell(withReuseIdentifier: "MovieaCVC", for: indexPath) as! MovieaCVC
-            switch tabIndex {
-             case 0:
-                cell.configureCell(movie:  viewModel?.playingNow?[indexPath.row])
-            case 1:
-                cell.configureCell(movie:  viewModel?.upcoming?[indexPath.row])
-            default:
-                cell.configureCell(movie:  viewModel?.popular?[indexPath.row])
-            }
-           
-            return cell
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "MovieDetailsVc") as! MovieDetailsVc
+        detailsVC.navigationItem.title = "PlanetTV"
+        detailsVC.viewModel = MoviesDetailsViewModel()
+        switch tabIndex {
+        case 0:
+            detailsVC.viewModel?.movieId =  viewModel?.playingNow?[indexPath.row].id
+        case 1:
+            detailsVC.viewModel?.movieId = viewModel?.upcoming?[indexPath.row].id
+        default:
+            detailsVC.viewModel?.movieId = viewModel?.popular?[indexPath.row].id
         }
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let detailsVC = storyboard?.instantiateViewController(withIdentifier: "MovieDetailsVc") as! MovieDetailsVc
-            detailsVC.navigationItem.title = "PlanetTV"
-            detailsVC.viewModel = MoviesDetailsViewModel()
-            switch tabIndex {
-             case 0:
-                detailsVC.viewModel?.movieId =  viewModel?.playingNow?[indexPath.row].id
-            case 1:
-                detailsVC.viewModel?.movieId = viewModel?.upcoming?[indexPath.row].id
-            default:
-                detailsVC.viewModel?.movieId = viewModel?.popular?[indexPath.row].id
-            }
-            navigationController?.pushViewController(detailsVC, animated: true)
-            
-        }
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let widthPerItem = moviesCollection.frame.width / 2 - 10
-            let heightPerItem = moviesCollection.frame.height / 2 - 17
-            return CGSize(width:widthPerItem, height:heightPerItem)
-            }
-                  
-      
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            
-                return 10
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return UIEdgeInsets(top: 5, left: 5, bottom: 0, right: 5)
-        }
+        navigationController?.pushViewController(detailsVC, animated: true)
         
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let widthPerItem = moviesCollection.frame.width / 2 - 10
+        let heightPerItem = moviesCollection.frame.height / 2 - 17
+        return CGSize(width:widthPerItem, height:heightPerItem)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 5, bottom: 0, right: 5)
+    }
+    
+}
 
-// MARK: - GetDaata
+// MARK: - GetData
 
 extension ViewController{
     func getData(){
         viewModel?.loadPlayingNow()
         viewModel?.loadUpcoming()
         viewModel?.loadPopular()
-        //viewModel?.fetchDetails()
         viewModel?.bindMoviesToViewController = {[weak self] in
             DispatchQueue.main.async {
                 self?.indicator?.stopAnimating()

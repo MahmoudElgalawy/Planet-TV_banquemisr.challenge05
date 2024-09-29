@@ -11,7 +11,7 @@ class RemoteNetwork:MoviesServices{
     
     static let shared = RemoteNetwork()
     private init(){}
-
+    
     var apiKey = "fedf785e78418f6f10d72c1a8d82ac4e"
     private let baseUrl = "https://api.themoviedb.org/3"
     private let urlSession = URLSession.shared
@@ -49,13 +49,13 @@ class RemoteNetwork:MoviesServices{
             
         }.resume()
     }
-
+    
     func fetchMovie(id: Int, completion: @escaping (Result<Movies, MoviesError>) -> ()) {
         guard let url = URL(string: "\(baseUrl)/movie/\(id)?api_key=\(apiKey)") else {
             completion(.failure(.invalidEndPoint))
             return
         }
-    
+        
         urlSession.dataTask(with: url) { data, response, error in
             if let _ = error {
                 completion(.failure(.apiError))
@@ -82,7 +82,7 @@ class RemoteNetwork:MoviesServices{
             
         }.resume()
     }
-
+    
     
     
 }

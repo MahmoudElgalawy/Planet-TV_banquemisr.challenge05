@@ -27,7 +27,6 @@
 		1EAC36D02CA99A35009046AA /* MovieDetailsViewModelTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC36CF2CA99A35009046AA /* MovieDetailsViewModelTesting.swift */; };
 		1EAC36D42CA9A547009046AA /* CoreDataTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC36D32CA9A547009046AA /* CoreDataTesting.swift */; };
 		1EB6FE8E2CA88E700080F58A /* LocalManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FE8D2CA88E700080F58A /* LocalManger.swift */; };
-		1EB6FE902CA8F4540080F58A /* localDetailsManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FE8F2CA8F4540080F58A /* localDetailsManger.swift */; };
 		1EB6FE9B2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FE9A2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift */; };
 		1EB6FEA32CA98FFE0080F58A /* NetworkingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FEA22CA98FFE0080F58A /* NetworkingTest.swift */; };
 		1EB6FEA72CA993BC0080F58A /* MoviesViewModelTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FEA62CA993BC0080F58A /* MoviesViewModelTesting.swift */; };
@@ -66,7 +65,6 @@
 		1EAC36CF2CA99A35009046AA /* MovieDetailsViewModelTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModelTesting.swift; sourceTree = "<group>"; };
 		1EAC36D32CA9A547009046AA /* CoreDataTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTesting.swift; sourceTree = "<group>"; };
 		1EB6FE8D2CA88E700080F58A /* LocalManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManger.swift; sourceTree = "<group>"; };
-		1EB6FE8F2CA8F4540080F58A /* localDetailsManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localDetailsManger.swift; sourceTree = "<group>"; };
 		1EB6FE982CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetTV_banquemisr.challenge05Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB6FE9A2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTV_banquemisr_challenge05Tests.swift; sourceTree = "<group>"; };
 		1EB6FEA22CA98FFE0080F58A /* NetworkingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTest.swift; sourceTree = "<group>"; };
@@ -112,10 +110,10 @@
 		1E1F20252CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */ = {
 			isa = PBXGroup;
 			children = (
-				1E413D9B2CA7081200B21189 /* Extensions */,
-				1E1F204D2CA67B3C00F8079F /* Modules */,
-				1E1F20452CA66D9600F8079F /* Utilities */,
 				1E1F20422CA668AF00F8079F /* Models */,
+				1E1F204D2CA67B3C00F8079F /* Modules */,
+				1E413D9B2CA7081200B21189 /* Extensions */,
+				1E1F20452CA66D9600F8079F /* Utilities */,
 				1E1F203E2CA662CA00F8079F /* Services */,
 				1E1F20262CA61AA800F8079F /* AppDelegate.swift */,
 				1E1F20282CA61AA800F8079F /* SceneDelegate.swift */,
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				1EB6FE8D2CA88E700080F58A /* LocalManger.swift */,
-				1EB6FE8F2CA8F4540080F58A /* localDetailsManger.swift */,
 			);
 			path = LocalServices;
 			sourceTree = "<group>";
@@ -209,8 +206,8 @@
 		1E413D9E2CA7707800B21189 /* MoviesLists */ = {
 			isa = PBXGroup;
 			children = (
-				1E1F204F2CA67B9600F8079F /* ViewModel */,
 				1E1F204E2CA67B8A00F8079F /* View */,
+				1E1F204F2CA67B9600F8079F /* ViewModel */,
 			);
 			path = MoviesLists;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 				1EB6FE8E2CA88E700080F58A /* LocalManger.swift in Sources */,
 				1E1F204C2CA6702400F8079F /* Networking.swift in Sources */,
 				1E1F20512CA67BB200F8079F /* MoviesViewModel.swift in Sources */,
-				1EB6FE902CA8F4540080F58A /* localDetailsManger.swift in Sources */,
 				1E1F20442CA668CC00F8079F /* MoviesModels.swift in Sources */,
 				1E413DA62CA771D300B21189 /* MoviesDetailsViewModel.swift in Sources */,
 				1E413DA32CA770FB00B21189 /* MovieDetailsVc.swift in Sources */,

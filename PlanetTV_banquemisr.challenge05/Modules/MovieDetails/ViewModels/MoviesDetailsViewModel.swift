@@ -9,7 +9,7 @@ import Foundation
 
 protocol DetailsProtocol{
     func loadImageData(posterPath: String, completion: @escaping (Data?) -> Void)
-    func getDetails(completion: @escaping () -> Void) 
+    func getDetails(completion: @escaping () -> Void)
     var movieDetails:Movies!{get set}
     var movieId:Int!{get set}
 }
@@ -20,7 +20,6 @@ class MoviesDetailsViewModel:DetailsProtocol{
     init(){
         networt = RemoteNetwork.shared
     }
-    
     func getDetails(completion: @escaping () -> Void) {
         networt?.fetchMovie(id: movieId, completion: {[weak self] result in
             switch result {
@@ -34,21 +33,19 @@ class MoviesDetailsViewModel:DetailsProtocol{
             }
         })
     }
-
-    
     func loadImageData(posterPath: String, completion: @escaping (Data?) -> Void) {
-            guard let url = URL(string: posterPath) else {
-                completion(nil)
-                return
-            }
-            
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                if let data = data {
-                    completion(data)
-                } else {
-                    completion(nil)
-                }
-            }.resume()
+        guard let url = URL(string: posterPath) else {
+            completion(nil)
+            return
         }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                completion(data)
+            } else {
+                completion(nil)
+            }
+        }.resume()
+    }
 }
 

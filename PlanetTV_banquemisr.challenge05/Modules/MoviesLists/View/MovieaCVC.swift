@@ -14,13 +14,13 @@ class MovieaCVC: UICollectionViewCell {
     @IBOutlet weak var releaseYear: UILabel!
     @IBOutlet weak var titleMovie: UILabel!
     var viewModel: MoviesProtocol?
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         viewBack.layer.cornerRadius = 10
         imgMovie.layer.cornerRadius = 10
         viewBack.layer.borderWidth = 2
-        viewBack.layer.borderColor = UIColor.color1.cgColor  /*UIColor(named: "color1")?.cgColor*/
+        viewBack.layer.borderColor = UIColor.color1.cgColor  
         viewBack.layer.masksToBounds = true
     }
     
@@ -34,7 +34,7 @@ class MovieaCVC: UICollectionViewCell {
         releaseYear.text = movie?.releaseDate
         guard let url =  movie?.posterPath else{return}
         let fullImageUrl = "https://image.tmdb.org/t/p/w500" + url
-    
+        
         viewModel?.loadImageData(posterPath: fullImageUrl, completion: { [weak self] data in
             guard let data = data else{return}
             DispatchQueue.main.async {

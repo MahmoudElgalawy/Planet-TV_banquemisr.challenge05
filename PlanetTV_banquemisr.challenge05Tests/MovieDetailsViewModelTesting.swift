@@ -12,6 +12,7 @@ final class MovieDetailsViewModelTesting: XCTestCase {
     var viewModel:DetailsProtocol?
     override func setUpWithError() throws {
         viewModel = MoviesDetailsViewModel()
+        viewModel?.movieId = 550
     }
 
     override func tearDownWithError() throws {

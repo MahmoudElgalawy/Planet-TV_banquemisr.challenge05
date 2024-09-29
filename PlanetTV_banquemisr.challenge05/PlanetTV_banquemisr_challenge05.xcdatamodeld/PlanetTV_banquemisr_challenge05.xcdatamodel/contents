@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="22G830" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="GenreDataEntity" representedClassName="GenreDataEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="movies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MoviesDataEntity" inverseName="genres" inverseEntity="MoviesDataEntity"/>
-    </entity>
     <entity name="MoviesData" representedClassName="MoviesData" syncable="YES" codeGenerationType="class">
         <attribute name="backdropPath" optional="YES" attributeType="String"/>
         <attribute name="category" optional="YES" attributeType="String"/>
@@ -17,19 +12,5 @@
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="voteCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
-    <entity name="MoviesDataEntity" representedClassName="MoviesDataEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="backdropPath" optional="YES" attributeType="String"/>
-        <attribute name="category" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="overview" optional="YES" attributeType="String"/>
-        <attribute name="posterPath" optional="YES" attributeType="String"/>
-        <attribute name="releaseDate" optional="YES" attributeType="String"/>
-        <attribute name="runtime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="tagline" optional="YES" attributeType="String"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
-        <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="voteCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GenreDataEntity" inverseName="movies" inverseEntity="GenreDataEntity"/>
     </entity>
 </model>
