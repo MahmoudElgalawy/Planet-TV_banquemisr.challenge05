@@ -212,6 +212,7 @@ extension ViewController{
         viewModel?.loadPlayingNow()
         viewModel?.loadUpcoming()
         viewModel?.loadPopular()
+        //viewModel?.fetchDetails()
         viewModel?.bindMoviesToViewController = {[weak self] in
             DispatchQueue.main.async {
                 self?.indicator?.stopAnimating()
