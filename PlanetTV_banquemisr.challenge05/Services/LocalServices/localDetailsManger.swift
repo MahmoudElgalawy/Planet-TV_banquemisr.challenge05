@@ -112,34 +112,6 @@ class MoviesDetailsStorage {
         return genresArray
     }
 
-    func deleteMovie(_ movie: Movies) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MoviesDataEntity")
-        let predicate = NSPredicate(format: "id == %d", movie.id)
-        fetchRequest.predicate = predicate
-        
-        do {
-            let movies = try context.fetch(fetchRequest) as! [NSManagedObject]
-            for movieObject in movies {
-                // Delete associated genres
-                if let genres = movieObject.value(forKey: "genres") as? NSSet {
-                    for genreObject in genres {
-                        if let genreManagedObject = genreObject as? NSManagedObject {
-                            context.delete(genreManagedObject)
-                        }
-                    }
-                }
-                // Delete the movie
-                context.delete(movieObject)
-            }
-            try context.save()
-            print("======== Movie deleted successfully ========")
-        } catch {
-            print("======== Error deleting movie ========")
-        }
-    }
-
     func deleteAllMovies() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext

@@ -11,8 +11,8 @@ class RemoteNetwork:MoviesServices{
     
     static let shared = RemoteNetwork()
     private init(){}
-    
-    private let apiKey = "fedf785e78418f6f10d72c1a8d82ac4e"
+
+    var apiKey = "fedf785e78418f6f10d72c1a8d82ac4e"
     private let baseUrl = "https://api.themoviedb.org/3"
     private let urlSession = URLSession.shared
     private let jsonDecoder = Utilities.jsonDecoder
@@ -86,3 +86,5 @@ class RemoteNetwork:MoviesServices{
     
     
 }
+
+

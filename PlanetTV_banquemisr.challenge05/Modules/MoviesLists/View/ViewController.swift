@@ -17,9 +17,10 @@ class ViewController: UIViewController {
     var viewModel: MoviesProtocol?
     var indicator : UIActivityIndicatorView?
     var tabIndex = 0
-    var local : MoviesStorage?
+    var local : LocalManger?
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem?.tintColor = UIColor(named: "color1")
         noInternet.isHidden = true
         local = MoviesStorage.shared
         viewModel = MoviesViewModel()
@@ -97,7 +98,6 @@ extension ViewController{
             }
         }
         let continueAction = UIAlertAction(title: "Continue", style: .default) {  _ in
-            // استرجاع البيانات من Core Data مع الفلترة الصحيحة
             if let category = self.tabIndex == 0 ? "playingNow" : (self.tabIndex == 1 ? "upcoming" : "popular") {
                 self.viewModel?.playingNow = self.local?.fetchMovies(category: category)
                 self.viewModel?.upcoming = self.local?.fetchMovies(category: category)
@@ -118,18 +118,14 @@ extension ViewController{
         monitor.pathUpdateHandler = { [weak self] path in
             if path.status == .satisfied {
                 DispatchQueue.main.async {
-                    // إذا عاد الإنترنت، أخفِ الـ UIAlertController
                     self?.dismiss(animated: true, completion: nil)
                     self?.moviesCollection.isHidden = false
                     self?.noInternet.isHidden = true
-                    // احذف الأفلام المخزنة القديمة
                     self?.local?.deleteAllMovies()
-                    // استدعاء getData لجلب البيانات من الإنترنت
                     self?.getData()
                 }
             } else {
                 DispatchQueue.main.async {
-                    // إذا لم يكن هناك اتصال، أظهر التنبيه
                     self?.showAlert()
                     self?.indicator?.stopAnimating()
                 }

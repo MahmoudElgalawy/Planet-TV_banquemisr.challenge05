@@ -22,7 +22,7 @@ protocol MoviesProtocol{
 
 
 class MoviesViewModel:MoviesProtocol{
-    let networt: RemoteNetwork?
+    let networt: MoviesServices?
     var playingNow:[Movies]?
     var upcoming: [Movies]?
     var popular: [Movies]?

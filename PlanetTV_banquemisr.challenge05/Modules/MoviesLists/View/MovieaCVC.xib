@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,22 +20,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="444" height="298"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S4O-QH-CYD">
-                                <rect key="frame" x="0.0" y="0.0" width="444" height="214.66666666666669"/>
+                                <rect key="frame" x="0.0" y="0.0" width="444" height="214.66666666666666"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yic-HL-qAJ">
                                 <rect key="frame" x="1" y="259.33333333333331" width="442" height="16"/>
+                                <color key="backgroundColor" red="0.2359187901" green="0.23378589750000001" blue="0.57258111239999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7L-Lr-W1J">
                                 <rect key="frame" x="1" y="214.66666666666666" width="442" height="44.666666666666657"/>
+                                <color key="backgroundColor" red="0.2359187901" green="0.23378589750000001" blue="0.57258111239999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" red="0.2359187901" green="0.23378589750000001" blue="0.57258111239999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="S4O-QH-CYD" firstAttribute="width" secondItem="tUl-j2-oD8" secondAttribute="height" multiplier="222:149" id="8TV-HE-uok"/>
                             <constraint firstItem="yic-HL-qAJ" firstAttribute="width" secondItem="q7L-Lr-W1J" secondAttribute="width" id="E87-9f-iUz"/>
@@ -72,9 +73,4 @@
             <point key="canvasLocation" x="360.30534351145036" y="107.04225352112677"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

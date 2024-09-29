@@ -30,7 +30,7 @@ class MovieDetailsVc: UIViewController {
         viewBacck.layer.cornerRadius = viewBacck.frame.size.width / 2
         viewBacck.layer.masksToBounds = true
         viewBacck.layer.borderWidth = 2
-        viewBacck.layer.borderColor = UIColor.orange.cgColor
+        viewBacck.layer.borderColor = UIColor.color1.cgColor
         overview.isEditable = false
         overview.isSelectable = true
         self.hideKeyboardWhenTappedAround()

@@ -20,7 +20,8 @@ class MovieaCVC: UICollectionViewCell {
         viewBack.layer.cornerRadius = 10
         imgMovie.layer.cornerRadius = 10
         viewBack.layer.borderWidth = 2
-        viewBack.layer.borderColor = UIColor.orange.cgColor
+        viewBack.layer.borderColor = UIColor.color1.cgColor  /*UIColor(named: "color1")?.cgColor*/
+        viewBack.layer.masksToBounds = true
     }
     
     static func nib()->UINib{

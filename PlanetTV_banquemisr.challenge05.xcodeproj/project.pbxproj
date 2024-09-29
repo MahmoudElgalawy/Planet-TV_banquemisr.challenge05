@@ -24,9 +24,24 @@
 		1E413D9D2CA7084000B21189 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413D9C2CA7084000B21189 /* ViewControllerExtension.swift */; };
 		1E413DA32CA770FB00B21189 /* MovieDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413DA22CA770FB00B21189 /* MovieDetailsVc.swift */; };
 		1E413DA62CA771D300B21189 /* MoviesDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413DA52CA771D300B21189 /* MoviesDetailsViewModel.swift */; };
+		1EAC36D02CA99A35009046AA /* MovieDetailsViewModelTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC36CF2CA99A35009046AA /* MovieDetailsViewModelTesting.swift */; };
+		1EAC36D42CA9A547009046AA /* CoreDataTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC36D32CA9A547009046AA /* CoreDataTesting.swift */; };
 		1EB6FE8E2CA88E700080F58A /* LocalManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FE8D2CA88E700080F58A /* LocalManger.swift */; };
 		1EB6FE902CA8F4540080F58A /* localDetailsManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FE8F2CA8F4540080F58A /* localDetailsManger.swift */; };
+		1EB6FE9B2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FE9A2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift */; };
+		1EB6FEA32CA98FFE0080F58A /* NetworkingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FEA22CA98FFE0080F58A /* NetworkingTest.swift */; };
+		1EB6FEA72CA993BC0080F58A /* MoviesViewModelTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FEA62CA993BC0080F58A /* MoviesViewModelTesting.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EB6FE9C2CA98F730080F58A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1F201B2CA61AA700F8079F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E1F20222CA61AA800F8079F;
+			remoteInfo = PlanetTV_banquemisr.challenge05;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1E1F20232CA61AA800F8079F /* PlanetTV_banquemisr.challenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetTV_banquemisr.challenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,12 +63,25 @@
 		1E413D9C2CA7084000B21189 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		1E413DA22CA770FB00B21189 /* MovieDetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVc.swift; sourceTree = "<group>"; };
 		1E413DA52CA771D300B21189 /* MoviesDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewModel.swift; sourceTree = "<group>"; };
+		1EAC36CF2CA99A35009046AA /* MovieDetailsViewModelTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModelTesting.swift; sourceTree = "<group>"; };
+		1EAC36D32CA9A547009046AA /* CoreDataTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTesting.swift; sourceTree = "<group>"; };
 		1EB6FE8D2CA88E700080F58A /* LocalManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManger.swift; sourceTree = "<group>"; };
 		1EB6FE8F2CA8F4540080F58A /* localDetailsManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localDetailsManger.swift; sourceTree = "<group>"; };
+		1EB6FE982CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetTV_banquemisr.challenge05Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB6FE9A2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTV_banquemisr_challenge05Tests.swift; sourceTree = "<group>"; };
+		1EB6FEA22CA98FFE0080F58A /* NetworkingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTest.swift; sourceTree = "<group>"; };
+		1EB6FEA62CA993BC0080F58A /* MoviesViewModelTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModelTesting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1E1F20202CA61AA800F8079F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EB6FE952CA98F730080F58A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1F20252CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */,
+				1EB6FE992CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests */,
 				1E1F20242CA61AA800F8079F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1F20232CA61AA800F8079F /* PlanetTV_banquemisr.challenge05.app */,
+				1EB6FE982CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +240,18 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		1EB6FE992CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1EB6FE9A2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift */,
+				1EB6FEA22CA98FFE0080F58A /* NetworkingTest.swift */,
+				1EB6FEA62CA993BC0080F58A /* MoviesViewModelTesting.swift */,
+				1EAC36CF2CA99A35009046AA /* MovieDetailsViewModelTesting.swift */,
+				1EAC36D32CA9A547009046AA /* CoreDataTesting.swift */,
+			);
+			path = PlanetTV_banquemisr.challenge05Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +272,24 @@
 			productReference = 1E1F20232CA61AA800F8079F /* PlanetTV_banquemisr.challenge05.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1EB6FE972CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EB6FE9E2CA98F730080F58A /* Build configuration list for PBXNativeTarget "PlanetTV_banquemisr.challenge05Tests" */;
+			buildPhases = (
+				1EB6FE942CA98F730080F58A /* Sources */,
+				1EB6FE952CA98F730080F58A /* Frameworks */,
+				1EB6FE962CA98F730080F58A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EB6FE9D2CA98F730080F58A /* PBXTargetDependency */,
+			);
+			name = PlanetTV_banquemisr.challenge05Tests;
+			productName = PlanetTV_banquemisr.challenge05Tests;
+			productReference = 1EB6FE982CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,6 +302,10 @@
 				TargetAttributes = {
 					1E1F20222CA61AA800F8079F = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					1EB6FE972CA98F730080F58A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 1E1F20222CA61AA800F8079F;
 					};
 				};
 			};
@@ -259,6 +323,7 @@
 			projectRoot = "";
 			targets = (
 				1E1F20222CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */,
+				1EB6FE972CA98F730080F58A /* PlanetTV_banquemisr.challenge05Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +337,13 @@
 				1E1F20332CA61AAB00F8079F /* Assets.xcassets in Resources */,
 				1E1F202E2CA61AA800F8079F /* Main.storyboard in Resources */,
 				1E413D9A2CA6F85400B21189 /* MovieaCVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EB6FE962CA98F730080F58A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +372,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1EB6FE942CA98F730080F58A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB6FE9B2CA98F730080F58A /* PlanetTV_banquemisr_challenge05Tests.swift in Sources */,
+				1EAC36D42CA9A547009046AA /* CoreDataTesting.swift in Sources */,
+				1EAC36D02CA99A35009046AA /* MovieDetailsViewModelTesting.swift in Sources */,
+				1EB6FEA32CA98FFE0080F58A /* NetworkingTest.swift in Sources */,
+				1EB6FEA72CA993BC0080F58A /* MoviesViewModelTesting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EB6FE9D2CA98F730080F58A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E1F20222CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */;
+			targetProxy = 1EB6FE9C2CA98F730080F58A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1E1F202C2CA61AA800F8079F /* Main.storyboard */ = {
@@ -497,6 +589,42 @@
 			};
 			name = Release;
 		};
+		1EB6FE9F2CA98F730080F58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83FN5933K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "banquemisr.PlanetTV-banquemisr-challenge05Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanetTV_banquemisr.challenge05.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanetTV_banquemisr.challenge05";
+			};
+			name = Debug;
+		};
+		1EB6FEA02CA98F730080F58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83FN5933K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "banquemisr.PlanetTV-banquemisr-challenge05Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanetTV_banquemisr.challenge05.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanetTV_banquemisr.challenge05";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -514,6 +642,15 @@
 			buildConfigurations = (
 				1E1F203B2CA61AAB00F8079F /* Debug */,
 				1E1F203C2CA61AAB00F8079F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EB6FE9E2CA98F730080F58A /* Build configuration list for PBXNativeTarget "PlanetTV_banquemisr.challenge05Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EB6FE9F2CA98F730080F58A /* Debug */,
+				1EB6FEA02CA98F730080F58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

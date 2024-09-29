@@ -14,7 +14,7 @@ protocol DetailsProtocol{
     var movieId:Int!{get set}
 }
 class MoviesDetailsViewModel:DetailsProtocol{
-    let networt: RemoteNetwork?
+    let networt: MoviesServices?
     var movieId:Int!
     var movieDetails:Movies!
     init(){
@@ -27,7 +27,7 @@ class MoviesDetailsViewModel:DetailsProtocol{
             case .success(let moviesResponse):
                 DispatchQueue.main.async {
                     self?.movieDetails = moviesResponse
-                    completion() // Call completion when data is fetched
+                    completion()
                 }
             case .failure(let error):
                 print("Failed to fetch movies: \(error.localizedDescription)")
