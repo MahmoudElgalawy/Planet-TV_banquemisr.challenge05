@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E1F20272CA61AA800F8079F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F20262CA61AA800F8079F /* AppDelegate.swift */; };
+		1E1F20292CA61AA800F8079F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F20282CA61AA800F8079F /* SceneDelegate.swift */; };
+		1E1F202B2CA61AA800F8079F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F202A2CA61AA800F8079F /* ViewController.swift */; };
+		1E1F202E2CA61AA800F8079F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1F202C2CA61AA800F8079F /* Main.storyboard */; };
+		1E1F20312CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F202F2CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodeld */; };
+		1E1F20332CA61AAB00F8079F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1F20322CA61AAB00F8079F /* Assets.xcassets */; };
+		1E1F20362CA61AAB00F8079F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1F20342CA61AAB00F8079F /* LaunchScreen.storyboard */; };
+		1E1F20412CA6630B00F8079F /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F20402CA6630B00F8079F /* APIServices.swift */; };
+		1E1F20442CA668CC00F8079F /* MoviesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F20432CA668CC00F8079F /* MoviesModels.swift */; };
+		1E1F20472CA66E2000F8079F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F20462CA66E2000F8079F /* Utilities.swift */; };
+		1E1F204C2CA6702400F8079F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F204B2CA6702400F8079F /* Networking.swift */; };
+		1E1F20512CA67BB200F8079F /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F20502CA67BB200F8079F /* MoviesViewModel.swift */; };
+		1E413D992CA6F85400B21189 /* MovieaCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413D972CA6F85400B21189 /* MovieaCVC.swift */; };
+		1E413D9A2CA6F85400B21189 /* MovieaCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E413D982CA6F85400B21189 /* MovieaCVC.xib */; };
+		1E413D9D2CA7084000B21189 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413D9C2CA7084000B21189 /* ViewControllerExtension.swift */; };
+		1E413DA32CA770FB00B21189 /* MovieDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413DA22CA770FB00B21189 /* MovieDetailsVc.swift */; };
+		1E413DA62CA771D300B21189 /* MoviesDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E413DA52CA771D300B21189 /* MoviesDetailsViewModel.swift */; };
+		1EB6FE8E2CA88E700080F58A /* LocalManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6FE8D2CA88E700080F58A /* LocalManger.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E1F20232CA61AA800F8079F /* PlanetTV_banquemisr.challenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetTV_banquemisr.challenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1F20262CA61AA800F8079F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E1F20282CA61AA800F8079F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1E1F202A2CA61AA800F8079F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E1F202D2CA61AA800F8079F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E1F20302CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlanetTV_banquemisr_challenge05.xcdatamodel; sourceTree = "<group>"; };
+		1E1F20322CA61AAB00F8079F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E1F20352CA61AAB00F8079F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E1F20372CA61AAB00F8079F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E1F20402CA6630B00F8079F /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		1E1F20432CA668CC00F8079F /* MoviesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModels.swift; sourceTree = "<group>"; };
+		1E1F20462CA66E2000F8079F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1E1F204B2CA6702400F8079F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		1E1F20502CA67BB200F8079F /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		1E413D972CA6F85400B21189 /* MovieaCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieaCVC.swift; sourceTree = "<group>"; };
+		1E413D982CA6F85400B21189 /* MovieaCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieaCVC.xib; sourceTree = "<group>"; };
+		1E413D9C2CA7084000B21189 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		1E413DA22CA770FB00B21189 /* MovieDetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVc.swift; sourceTree = "<group>"; };
+		1E413DA52CA771D300B21189 /* MoviesDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewModel.swift; sourceTree = "<group>"; };
+		1EB6FE8D2CA88E700080F58A /* LocalManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManger.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E1F20202CA61AA800F8079F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E1F201A2CA61AA700F8079F = {
+			isa = PBXGroup;
+			children = (
+				1E1F20252CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */,
+				1E1F20242CA61AA800F8079F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E1F20242CA61AA800F8079F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F20232CA61AA800F8079F /* PlanetTV_banquemisr.challenge05.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E1F20252CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */ = {
+			isa = PBXGroup;
+			children = (
+				1E413D9B2CA7081200B21189 /* Extensions */,
+				1E1F204D2CA67B3C00F8079F /* Modules */,
+				1E1F20452CA66D9600F8079F /* Utilities */,
+				1E1F20422CA668AF00F8079F /* Models */,
+				1E1F203E2CA662CA00F8079F /* Services */,
+				1E1F20262CA61AA800F8079F /* AppDelegate.swift */,
+				1E1F20282CA61AA800F8079F /* SceneDelegate.swift */,
+				1E1F202C2CA61AA800F8079F /* Main.storyboard */,
+				1E1F20322CA61AAB00F8079F /* Assets.xcassets */,
+				1E1F20342CA61AAB00F8079F /* LaunchScreen.storyboard */,
+				1E1F20372CA61AAB00F8079F /* Info.plist */,
+				1E1F202F2CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodeld */,
+			);
+			path = PlanetTV_banquemisr.challenge05;
+			sourceTree = "<group>";
+		};
+		1E1F203E2CA662CA00F8079F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F20482CA66FD400F8079F /* RemoteServices */,
+				1E1F20492CA66FE800F8079F /* LocalServices */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1E1F20422CA668AF00F8079F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F20432CA668CC00F8079F /* MoviesModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E1F20452CA66D9600F8079F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F20462CA66E2000F8079F /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1E1F20482CA66FD400F8079F /* RemoteServices */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F20402CA6630B00F8079F /* APIServices.swift */,
+				1E1F204B2CA6702400F8079F /* Networking.swift */,
+			);
+			path = RemoteServices;
+			sourceTree = "<group>";
+		};
+		1E1F20492CA66FE800F8079F /* LocalServices */ = {
+			isa = PBXGroup;
+			children = (
+				1EB6FE8D2CA88E700080F58A /* LocalManger.swift */,
+			);
+			path = LocalServices;
+			sourceTree = "<group>";
+		};
+		1E1F204D2CA67B3C00F8079F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1E413D9E2CA7707800B21189 /* MoviesLists */,
+				1E413D9F2CA7709D00B21189 /* MovieDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1E1F204E2CA67B8A00F8079F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F202A2CA61AA800F8079F /* ViewController.swift */,
+				1E413D972CA6F85400B21189 /* MovieaCVC.swift */,
+				1E413D982CA6F85400B21189 /* MovieaCVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E1F204F2CA67B9600F8079F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F20502CA67BB200F8079F /* MoviesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1E413D9B2CA7081200B21189 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E413D9C2CA7084000B21189 /* ViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1E413D9E2CA7707800B21189 /* MoviesLists */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F204F2CA67B9600F8079F /* ViewModel */,
+				1E1F204E2CA67B8A00F8079F /* View */,
+			);
+			path = MoviesLists;
+			sourceTree = "<group>";
+		};
+		1E413D9F2CA7709D00B21189 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				1E413DA02CA770AD00B21189 /* Views */,
+				1E413DA12CA770C400B21189 /* ViewModels */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		1E413DA02CA770AD00B21189 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E413DA22CA770FB00B21189 /* MovieDetailsVc.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E413DA12CA770C400B21189 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1E413DA52CA771D300B21189 /* MoviesDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E1F20222CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1F203A2CA61AAB00F8079F /* Build configuration list for PBXNativeTarget "PlanetTV_banquemisr.challenge05" */;
+			buildPhases = (
+				1E1F201F2CA61AA800F8079F /* Sources */,
+				1E1F20202CA61AA800F8079F /* Frameworks */,
+				1E1F20212CA61AA800F8079F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanetTV_banquemisr.challenge05;
+			productName = PlanetTV_banquemisr.challenge05;
+			productReference = 1E1F20232CA61AA800F8079F /* PlanetTV_banquemisr.challenge05.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E1F201B2CA61AA700F8079F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					1E1F20222CA61AA800F8079F = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 1E1F201E2CA61AA800F8079F /* Build configuration list for PBXProject "PlanetTV_banquemisr.challenge05" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E1F201A2CA61AA700F8079F;
+			productRefGroup = 1E1F20242CA61AA800F8079F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E1F20222CA61AA800F8079F /* PlanetTV_banquemisr.challenge05 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E1F20212CA61AA800F8079F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1F20362CA61AAB00F8079F /* LaunchScreen.storyboard in Resources */,
+				1E1F20332CA61AAB00F8079F /* Assets.xcassets in Resources */,
+				1E1F202E2CA61AA800F8079F /* Main.storyboard in Resources */,
+				1E413D9A2CA6F85400B21189 /* MovieaCVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E1F201F2CA61AA800F8079F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1F202B2CA61AA800F8079F /* ViewController.swift in Sources */,
+				1E1F20272CA61AA800F8079F /* AppDelegate.swift in Sources */,
+				1E1F20472CA66E2000F8079F /* Utilities.swift in Sources */,
+				1EB6FE8E2CA88E700080F58A /* LocalManger.swift in Sources */,
+				1E1F204C2CA6702400F8079F /* Networking.swift in Sources */,
+				1E1F20512CA67BB200F8079F /* MoviesViewModel.swift in Sources */,
+				1E1F20442CA668CC00F8079F /* MoviesModels.swift in Sources */,
+				1E413DA62CA771D300B21189 /* MoviesDetailsViewModel.swift in Sources */,
+				1E413DA32CA770FB00B21189 /* MovieDetailsVc.swift in Sources */,
+				1E1F20292CA61AA800F8079F /* SceneDelegate.swift in Sources */,
+				1E413D9D2CA7084000B21189 /* ViewControllerExtension.swift in Sources */,
+				1E1F20312CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodeld in Sources */,
+				1E1F20412CA6630B00F8079F /* APIServices.swift in Sources */,
+				1E413D992CA6F85400B21189 /* MovieaCVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E1F202C2CA61AA800F8079F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1F202D2CA61AA800F8079F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E1F20342CA61AAB00F8079F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1F20352CA61AAB00F8079F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E1F20382CA61AAB00F8079F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E1F20392CA61AAB00F8079F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E1F203B2CA61AAB00F8079F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83FN5933K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetTV_banquemisr.challenge05/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "banquemisr.PlanetTV-banquemisr-challenge05";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1F203C2CA61AAB00F8079F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83FN5933K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetTV_banquemisr.challenge05/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "banquemisr.PlanetTV-banquemisr-challenge05";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E1F201E2CA61AA800F8079F /* Build configuration list for PBXProject "PlanetTV_banquemisr.challenge05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1F20382CA61AAB00F8079F /* Debug */,
+				1E1F20392CA61AAB00F8079F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E1F203A2CA61AAB00F8079F /* Build configuration list for PBXNativeTarget "PlanetTV_banquemisr.challenge05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1F203B2CA61AAB00F8079F /* Debug */,
+				1E1F203C2CA61AAB00F8079F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E1F202F2CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E1F20302CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodel */,
+			);
+			currentVersion = 1E1F20302CA61AA800F8079F /* PlanetTV_banquemisr_challenge05.xcdatamodel */;
+			path = PlanetTV_banquemisr_challenge05.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1E1F201B2CA61AA700F8079F /* Project object */;
+}
