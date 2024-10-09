@@ -18,9 +18,11 @@ class ViewController: UIViewController {
     var indicator : UIActivityIndicatorView?
     var tabIndex = 0
     var local : LocalManger?
+    var back:UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem?.tintColor = UIColor(named: "color1")
+        back = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.backward"), style: .plain, target: self, action: #selector(backButton))
+        
         noInternet.isHidden = true
         local = MoviesStorage.shared
         viewModel = MoviesViewModel()
@@ -124,6 +126,9 @@ extension ViewController{
         let queue = DispatchQueue(label: "NetworkMonitor")
         monitor.start(queue: queue)
     }
+    @objc func backButton() {
+        self.navigationController?.popViewController(animated: true)
+       }
 }
 
 
@@ -167,6 +172,8 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         default:
             detailsVC.viewModel?.movieId = viewModel?.popular?[indexPath.row].id
         }
+        detailsVC.navigationItem.leftBarButtonItem = back
+        detailsVC.navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "color1")
         navigationController?.pushViewController(detailsVC, animated: true)
         
     }

@@ -21,13 +21,8 @@ struct Movies: Decodable {
     let voteCount: Int?
     let runtime: Int?
     let releaseDate: String
-    let genres: [Genre]? 
     let tagline: String?
     
 }
 
 
-struct Genre: Decodable {
-    let id: Int
-    let name: String
-}

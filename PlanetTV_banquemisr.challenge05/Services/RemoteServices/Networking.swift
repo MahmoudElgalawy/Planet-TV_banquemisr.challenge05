@@ -3,7 +3,7 @@
 //  PlanetTV_banquemisr.challenge05
 //
 //  Created by Mahmoud  on 27/09/2024.
-//
+
 
 import Foundation
 
@@ -50,7 +50,7 @@ class RemoteNetwork:MoviesServices{
         }.resume()
     }
     
-    func fetchMovie(id: Int, completion: @escaping (Result<Movies, MoviesError>) -> ()) {
+    func fetchMovie(id: Int, completion: @escaping (Result<MoviesDetails, MoviesError>) -> ()) {
         guard let url = URL(string: "\(baseUrl)/movie/\(id)?api_key=\(apiKey)") else {
             completion(.failure(.invalidEndPoint))
             return
@@ -73,7 +73,7 @@ class RemoteNetwork:MoviesServices{
             }
             
             do {
-                let movie = try self.jsonDecoder.decode(Movies.self, from: data)
+                let movie = try self.jsonDecoder.decode(MoviesDetails.self, from: data)
                 completion(.success(movie))
             } catch {
                 print("Serialization Error: \(error)")
@@ -84,7 +84,39 @@ class RemoteNetwork:MoviesServices{
     }
     
     
-    
+    func fetchMovieVideos(id: Int, completion: @escaping (Result<[MovieVideo], MoviesError>) -> ()) {
+        guard let url = URL(string: "\(baseUrl)/movie/\(id)/videos?api_key=\(apiKey)") else {
+            completion(.failure(.invalidEndPoint))
+            return
+        }
+        
+        urlSession.dataTask(with: url) { data, response, error in
+            if let _ = error {
+                completion(.failure(.apiError))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do {
+                let videosResponse = try self.jsonDecoder.decode(MovieVideosResponse.self, from: data)
+                completion(.success(videosResponse.results))
+            } catch {
+                print("Serialization Error: \(error)")
+                completion(.failure(.serializationError))
+            }
+            
+        }.resume()
+    }
+
 }
 
 

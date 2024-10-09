@@ -8,10 +8,12 @@
 import XCTest
 @testable import PlanetTV_banquemisr_challenge05
 import CoreData
-var persistentContainer: NSPersistentContainer!
-var moviesStorage: MoviesStorage!
+
 
 final class CoreDataTesting: XCTestCase {
+    
+    var persistentContainer: NSPersistentContainer!
+    var moviesStorage: MoviesStorage!
 
     override func setUpWithError() throws {
     persistentContainer = NSPersistentContainer(name: "PlanetTV_banquemisr_challenge05")

@@ -10,13 +10,14 @@ import Foundation
 protocol DetailsProtocol{
     func loadImageData(posterPath: String, completion: @escaping (Data?) -> Void)
     func getDetails(completion: @escaping () -> Void)
-    var movieDetails:Movies!{get set}
+    func fetchMovieVideos(id: Int, completion: @escaping (Result<[MovieVideo], MoviesError>) -> Void)
+    var movieDetails:MoviesDetails!{get set}
     var movieId:Int!{get set}
 }
 class MoviesDetailsViewModel:DetailsProtocol{
     let networt: MoviesServices?
     var movieId:Int!
-    var movieDetails:Movies!
+    var movieDetails:MoviesDetails!
     init(){
         networt = RemoteNetwork.shared
     }
@@ -47,5 +48,15 @@ class MoviesDetailsViewModel:DetailsProtocol{
             }
         }.resume()
     }
+    func fetchMovieVideos(id: Int, completion: @escaping (Result<[MovieVideo], MoviesError>) -> Void) {
+        networt?.fetchMovieVideos(id: id) { result in
+               switch result {
+               case .success(let videos):
+                   completion(.success(videos))
+               case .failure(let error):
+                   completion(.failure(error))
+               }
+           }
+       }
 }
 

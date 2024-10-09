@@ -74,7 +74,6 @@ class MoviesStorage: LocalManger {
                     voteCount: managedMovie.value(forKey: "voteCount") as? Int,
                     runtime: managedMovie.value(forKey: "runtime") as? Int,
                     releaseDate: managedMovie.value(forKey: "releaseDate") as! String,
-                    genres: nil,
                     tagline: managedMovie.value(forKey: "tagline") as? String
                 )
                 moviesArray.append(movie)
